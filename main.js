@@ -58,7 +58,7 @@ class Food {
   }
 }
 // Jem Solution
-class Food {
+class Foods {
   constructor(el, foodData) {
     (this._root = el), (this._data = foodData);
   }
@@ -82,7 +82,13 @@ class Food {
   }
 }
 /*/////////////////////////////////////////////////////////////////////////////*/
+// Create a function that takes a string and returns a
+// new string with duplicates removed
 
+/*
+ const str = 'This is is a test test string';
+ removeDuplicates(str); // 'This is a test string'
+ */
 // My Solution
 function removeDuplication(str) {
   let newString = [];
@@ -117,6 +123,10 @@ function removeDuplicates(str) {
 }
 
 //*///////////////////////////////////////////////////////////////////////*/
+// Without using .flat(), create a function to flatten an array
+
+// const exampleArray = [1,2,[3,4, [5,6,7], 8], 9, 10];
+// flatten(exampleArray); // [1,2,3,4,5,6,7,8,9,10]
 
 // My Solution
 let newArr = [];
@@ -144,7 +154,17 @@ function flatten(arr) {
   return x;
 }
 /*/////////////////////////////////////////////////////////////////////////////////////////////*/
+// Implement Function.prototype.bind()
 
+/*
+    const foo = function() {
+        console.log(this.bar);
+    }
+
+    let baz = foo.bind({bar: 'hello'})
+
+    baz(); // Hello
+*/
 Function.prototype.testBind = function (context) {
   const fn = this;
   return function () {
@@ -197,3 +217,60 @@ function debounce(fn, time) {
   };
 }
 /////////////////////////////////////////////////////////////////////////////////////////////////
+// We have two identical DOM trees, A and B. For DOM tree A, we have
+// the location of an element. Create a function to find that same element
+// in tree B.
+
+//Jem Solution
+function FindElement(ele, root) {
+  const path = [];
+  let pointer = ele;
+  while (ele.parent) {
+    const index = pointer.parent.children.indexOf(pointer);
+    path.push(index);
+    pointer = pointer.parent;
+  }
+
+  pointer = root;
+  while (path.length) {
+    pointer = pointer.children[path.pop()];
+    console.log(pointer);
+  }
+}
+////////////////////////////////////////////////////////////////////////////////
+// Create a function to move an element. The function arguments are,
+// distance, duration, and the element to move.
+
+/*
+    function moveElement(duration, distance, element) {}
+*/
+//my Soluation
+// function moveElement(duration, distance, element) {
+//   let PostionX = element.getBoundingClientRect().left + window.scrollX;
+//   let PostionY = element.getBoundingClientRect().top + window.scrollY;
+//   setTimeout(() => {
+//     element.style.position = "absolute";
+//     let y = PostionY + distance;
+//     let x = PostionX + distance;
+//     element.style.top = `${y}px`;
+//     element.style.left = `${x}px`;
+//   }, duration);
+// }
+// moveElement(1000, 100, document.getElementById("test"));
+
+//JEM Soluation
+function moveElement(duration, distance, element) {
+  const start = performance.now();
+
+  function move(currentTime) {
+    const elapsed = currentTime - start;
+    const progress = elapsed / duration;
+    const amountToMove = progress * distance;
+    element.style.transfrom = `translateX(${amountToMove}px)`;
+    if (amountToMove < distance) {
+      requestAnimationFrame(move);
+    }
+  }
+  requestAnimationFrame(move);
+}
+moveElement(1000, 800, document.getElementById("test"));

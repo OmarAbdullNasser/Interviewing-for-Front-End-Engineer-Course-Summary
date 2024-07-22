@@ -1,0 +1,2 @@
+requestAnimationFrame()
+    is a method provided by the browser that helps in creating smooth animations. It tells the browser that you wish to perform an animation and requests that the browser schedule a repaint of the window for the next animation frame. It is commonly used in scenarios where you need to update the visual state of the web page in a performant manner.
