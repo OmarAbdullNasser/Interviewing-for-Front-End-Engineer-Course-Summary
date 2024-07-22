@@ -261,16 +261,43 @@ function FindElement(ele, root) {
 //JEM Soluation
 function moveElement(duration, distance, element) {
   const start = performance.now();
-
   function move(currentTime) {
     const elapsed = currentTime - start;
     const progress = elapsed / duration;
     const amountToMove = progress * distance;
-    element.style.transfrom = `translateX(${amountToMove}px)`;
+    element.style.transform = `translateX(${amountToMove}px)`;
     if (amountToMove < distance) {
       requestAnimationFrame(move);
     }
   }
   requestAnimationFrame(move);
 }
-moveElement(1000, 800, document.getElementById("test"));
+// moveElement(1000, 800, document.getElementById("test"));
+////////////////////////////////////////////////////////////////////////////////
+// Create a sleep function that takes one parameter (time) and
+// will wait "time" ms
+
+/*
+    async function run() {
+        await sleep(500);
+        console.log('hello');
+        await sleep(500);
+        console.log('world');
+    }
+*/
+//Jem  soluion
+function sleep(time) {
+  return new Promise((reslove) => {
+    setTimeout(() => {
+      reslove();
+    }, time);
+  }); 
+}
+
+async function run() {
+  await sleep(1000);
+  console.log("hello");
+  await sleep(1000);
+  console.log("world");
+}
+run();
