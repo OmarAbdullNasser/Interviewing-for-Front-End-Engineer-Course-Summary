@@ -1,0 +1,47 @@
+GitHub repo:
+https://github.com/young/frontend-interviewing/tree/master
+
+Summary: Interviewing for Front-End Engineers
+    1. Introduction
+        Course Overview: Preparation strategies for front-end engineering interviews.
+        Instructor: Jem Young, an experienced front-end engineer in Netflix.
+    2. Preparation and Mindset
+        Mindset: Importance of confidence and a positive attitude.
+        Research: Understand the company, its products, and tech stack.
+        Practice: Regular coding practice, especially on platforms like LeetCode and HackerRank.
+    3. Resume and Portfolio
+        Resume Tips: Keep it concise, highlight relevant experience, and tailor it to the job.
+        Portfolio: Showcase projects that demonstrate your skills and problem-solving abilities.
+        GitHub Profile: Maintain a clean and active GitHub profile with relevant projects.
+    4. Technical Skills
+        HTML/CSS: Deep understanding of semantic HTML, modern CSS (Flexbox, Grid), and responsive design.
+        JavaScript: Proficiency in JavaScript fundamentals, ES6+ features, and asynchronous programming.
+        Frameworks/Libraries: Experience with popular frameworks like React, Angular, or Vue.js.
+        Tooling: Familiarity with tools like Webpack, Babel, and version control systems (Git).
+    5. Algorithms and Data Structures
+        Common Topics: Arrays, strings, linked lists, trees, graphs, and sorting algorithms.
+        Problem-Solving: Practice solving problems efficiently and explaining your thought process.
+        Big O Notation: Understanding time and space complexity.
+    6. System Design
+        Web Architecture: Basic understanding of how web applications are structured.
+        Design Patterns: Knowledge of common design patterns and their use cases.
+        Scalability: Considerations for building scalable and maintainable systems.
+    7. Behavioral Interviews
+        STAR Method: Situation, Task, Action, Result – a framework for answering behavioral questions.
+        Common Questions: Examples include handling conflicts, working in teams, and dealing with failure.
+        Cultural Fit: Demonstrating alignment with the company's values and culture.
+    8. Practical Coding Interviews
+        Whiteboard Coding: Techniques for effectively solving problems on a whiteboard.
+        Live Coding: Tips for performing well in live coding sessions.
+        Code Reviews: Importance of writing clean, readable code and understanding best practices.
+    9. Post-Interview
+    Follow-Up: Sending thank-you notes and following up with the interviewer.
+
+    Feedback: Seeking constructive feedback to improve for future interviews.
+
+    Negotiation: Strategies for negotiating job offers and understanding compensation packages.
+
+    Resources
+        Practice Platforms: LeetCode, HackerRank, CodeSignal.
+        Reading Materials: Books like "Cracking the Coding Interview" by Gayle Laakmann McDowell.
+        Communities: Join front-end developer communities and forums for support and networking.
